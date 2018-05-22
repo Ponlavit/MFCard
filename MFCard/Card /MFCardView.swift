@@ -131,7 +131,7 @@ extension MFCardDelegate{
         //Other SetUps...
         cardTextFields = [txtCardNoP4,txtCardNoP3,txtCardNoP2,txtCardNoP1,txtCardName,txtCvc];
         btnDone.setTitle("Close", for: .normal)
-        let components = (Calendar.current as NSCalendar).components([.day, .month, .year], from: Date())
+        let components = (Calendar(identifier: .gregorian) as NSCalendar).components([.day, .month, .year], from: Date())
         let year = components.year
         let expiryMonth = Month.allValues
         var expiryYear :[String] = [String]()
